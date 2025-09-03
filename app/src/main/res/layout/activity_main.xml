@@ -3,51 +3,57 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:anroid="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/number1_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="text"
-        android:text="First Number" />
+        android:inputType="numberDecimal"
+        android:text=""
+        anroid:hint="Enter_First_Number" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/number2_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="text"
-        android:text="Second Number" />
+        android:inputType="numberDecimal"
+        android:text=""
+        android:hint="Enter_Second_Number" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/add_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="+" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/subtract_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="-" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/multiply_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="*" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/divide_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="/" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/result_text_view"
         android:layout_width="match_parent"
         android:layout_height="71dp"
-        android:text="Result" />
+        android:text="Result will be shown here"
+        android:textSize="24sp"
+        android:color="#BF0F0F"/>
+
 </LinearLayout>
