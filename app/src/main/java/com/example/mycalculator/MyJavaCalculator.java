@@ -1,4 +1,7 @@
-package com.example.mycalculator.com.example;
+package com.example.mycalculator;
+
+
+import static java.lang.Integer.parseInt;
 
 import android.os.Bundle;
 import android.view.View;
@@ -7,8 +10,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.mycalculator.R;
 
 public class MyJavaCalculator extends AppCompatActivity {
     // variables
@@ -73,9 +74,9 @@ public class MyJavaCalculator extends AppCompatActivity {
     }
 
     private void calculate(String operator) {
-        double number1 = parseDouble(number1EditText.getText().toString());
-        double number2 = parseDouble(number2EditText.getText().toString());
-        double result = 0;
+       int number1 = parseInt(number1EditText.getText().toString());
+        int number2 = parseInt(number2EditText.getText().toString());
+        int result = 0;
 
         switch (operator) {
             case "+":
@@ -100,12 +101,12 @@ public class MyJavaCalculator extends AppCompatActivity {
         resultTextView.setText("Result: " + result);
     }
 
-    private double parseDouble(String str) {
+    private int parseInt(String str) {
         if (str == null || str.isEmpty()) {
             return 0;
         }
         try {
-            return Double.parseDouble(str);
+            return (int) Double.parseDouble(str);
         } catch (NumberFormatException e) {
             return 0;
         }

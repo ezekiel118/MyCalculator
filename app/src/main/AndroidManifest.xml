@@ -11,17 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyCalculator">
+
+        <!-- Calculator Activity (Java) as launcher -->
         <activity
-            android:name=".MainActivity"
+            android:name=".MyJavaCalculator"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.MyCalculator">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Compose Activity (Kotlin) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+
     </application>
 
 </manifest>

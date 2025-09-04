@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:anroid="http://schemas.android.com/tools"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MyJavaCalculator">
 
     <EditText
         android:id="@+id/number1_edit_text"
@@ -12,8 +13,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:text=""
-        anroid:hint="Enter_First_Number" />
+        android:hint="Enter First Number" />
 
     <EditText
         android:id="@+id/number2_edit_text"
@@ -21,8 +21,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:text=""
-        android:hint="Enter_Second_Number" />
+        android:hint="Enter Second Number" />
 
     <Button
         android:id="@+id/add_button"
@@ -40,20 +39,21 @@
         android:id="@+id/multiply_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="*" />
+        android:text="×" />
 
     <Button
         android:id="@+id/divide_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="/" />
+        android:text="÷" />
 
     <TextView
         android:id="@+id/result_text_view"
         android:layout_width="match_parent"
-        android:layout_height="71dp"
+        android:layout_height="wrap_content"
         android:text="Result will be shown here"
         android:textSize="24sp"
-        android:color="#BF0F0F"/>
-
+        android:textColor="#BF0F0F"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
 </LinearLayout>
